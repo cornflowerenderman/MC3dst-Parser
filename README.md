@@ -17,7 +17,7 @@ MC3dstFile mc3dstFile = new MC3dstFile();
 // Use the parse method to parse a 3dst image
 mc3dstFile.parse("/path/to/image.3dst");
 // Use the extractPNG method to generate a .png file from the parsed 3dst image
-mc3dstFile.extractPNG("/path/to/output.png");
+mc3dstFile.extractToPNG("/path/to/output.png");
 
 BufferedImage image = ImageIO.read(new File("/path/to/replacementImage.png"));
 // Use the replace method to replace the image in a parsed 3dst image from a .png file
