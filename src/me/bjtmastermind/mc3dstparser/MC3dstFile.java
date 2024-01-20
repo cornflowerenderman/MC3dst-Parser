@@ -166,7 +166,8 @@ public class MC3dstFile {
                 System.err.println("Detected unknown texture type!");
                 return null;
         }
-        this.image = Utils.verticalFlipImage(Utils.rescramble(this.image, true));
+        BufferedImage img = Utils.verticalFlipImage(Utils.rescramble(this.image, true));
+        this.image = img.getSubimage(0, 0, originalWidth, originalHeight);    //Crop image to original size
         return this;
     }
 
